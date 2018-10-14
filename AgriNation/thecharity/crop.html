@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AgriNation</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+    window.onload = function(){ 
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the button that opens the modal
+    //var btn = document.getElementById("mybtn");
+    var btns = document.querySelectorAll('.pack'); 
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    //btn.onclick = function() {
+   //     modal.style.display = "block";
+   // }
+   [].forEach.call(btns, function(el) {
+  el.onclick = function() {
+      modal.style.display = "block";
+  }
+})
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    
+};
+
+//var btn = document.getElementById('sbtn');
+//var m1 = document.getElementById('modalinput');
+//var m2 = document.getElementById('modalin');
+ //   btn.onclick = function() {
+  //      m1.style.display = "none";
+  //      m2.style.display = "block";
+  //  };
+
+    function myFunction() {
+        var m1 = document.getElementById('modalinput');
+var m2 = document.getElementById('modalin');
+m1.style.display = "none";
+        m2.style.display = "block";
+}
+    
+    </script>
+</head>
+<body class="single-page portfolio">
+    <header class="site-header">
+        <div class="top-header-bar">
+            <div class="container">
+                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                    <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                        <div class="header-bar-email">
+                            <!--MAIL: <a href="#">contact@ourcharity.com</a>-->
+                        </div><!-- .header-bar-email -->
+
+                        <div class="header-bar-text">
+                            <!--p>PHONE: <span>+24 3772 120 091 / +56452 4567</span></p-->
+                        </div><!-- .header-bar-text -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                        <div class="donate-btn">
+                            <!--a href="#">Donate Now</a-->
+                        </div><!-- .donate-btn -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .top-header-bar -->
+
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/AgriNashlogo.png" alt="logo"></a>
+                        </div><!-- .site-branding -->
+
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                <li class="current-menu-item"><a href="index.html">Home</a></li>
+                               <li><a href="irrigation.html">Irrigation</a></li>
+                                <li><a href="crop.html">Crop</a></li>
+                                <li><a href="about.html">About us</a></li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Crop Monitor</h1>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .page-header -->
+
+    <div class="portfolio-wrap" style="padding: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                       
+                    </div><!-- .section-heading -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+
+            <div class="row">
+                <div class="col-16 col-lg-12" style="padding-bottom: 20px;">
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between" style="padding: 40px 24px;background: #edf3f5;">
+                        
+                       
+
+
+                        <div id="wrap">
+                        </div>
+
+                    </div><!-- .cause-wrap -->
+                </div><!-- .col -->
+
+                
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div>
+
+  
+
+
+
+    <footer class="site-footer">
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | AgriNation</p>
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-bar -->
+    </footer><!-- .site-footer
+    <a class="btn btn-primary btn-xl js-scroll-trigger"  id="mybtn">Subscribe</a> -->
+
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header" style="display: block;">
+        <span class="close">&times;</span>
+        <h3>Share your details</h3>
+      </div>
+      <div class="modalbody" style="text-align: center; padding: 10px;" id="modalinput">
+        <form style="text-align: center; padding: 10px;">
+           
+            <h5>Name: <input type="text" name="name"></h5>
+            
+            <br>
+        
+            <h5>Number:  <input type="text" name="no"></h5>
+           
+          </form>
+          <a class="btn btn-primary btn-xl js-scroll-trigger"  id="sbtn" onclick="myFunction()">Submit</a>
+      </div>
+      <div class="modalbody2" style="text-align: center; padding: 10px;" id="modalin">
+    <h4>Details Saved Successfully!</h4></div>
+    <!--  <div class="modal-footer" style="display: block;">
+        <h3>Modal Footer</h3> 
+      </div>-->
+    </div>
+  
+  </div>
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+    <script type="text/javascript">
+        $.get('plant.csv', function(data) {
+        
+        // start the table
+        var html = '<table id="table_id" border="1" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">\n';
+        
+        // split into lines
+        var rows = data.split("\n");
+        var i = 0;
+        // parse lines
+        rows.forEach( function getvalues(ourrow) {
+        
+        // start a table row
+        html +=  "</tr>\n";
+        
+        // split line into columns
+        var columns = ourrow.split(",");
+        //console.log(columns);
+        
+        //html += "<td class=\"CellWithComment\" >" + columns[0] + "<span class=\"CellComment\" id=i>"+ columns[2] + columns[3]+columns[5] +"</span></td>";
+        html += "<td>" + columns[2] + "</td>";
+        html += "<td>" + columns[4] + "</td>";
+        html += "<td>" + columns[9] + "</td>";
+        html += "<td>" + columns[10] + "</td>";
+            if(i > 0){html += "<td><a class=\"btn btn-primary btn-xl js-scroll-trigger pack\" id=\"mybtn\">Subscribe</a></td>";}
+        
+        i++;
+        
+        // close row
+        html +=  "</tr>\n";
+        
+        })
+        // close table
+        html += "</table>";
+        
+        // insert into div
+        $('#wrap').append(html);
+        
+        });
+        
+        
+         </script>
+
+
+
+</body>
+</html>
